@@ -68,8 +68,8 @@ correct_prediction = tf.equal(tf.argmax(Y_conv, 1), tf.argmax(Y_, 1))
 correct_prediction = tf.cast(correct_prediction, tf.float32)
 accuracy = tf.reduce_mean(correct_prediction)
 
-def floatify(img):
-    data = list(img.getdata())
+def floatify(img): # Need to convert a number in range [0,255] to a float in range [0,1]
+    data = list(img.getdata()) # Extract the greyscale values from the .bmp
     new_data = []
     element = 0
     for i in range(len(data)):
