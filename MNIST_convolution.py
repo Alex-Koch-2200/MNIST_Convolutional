@@ -1,5 +1,4 @@
 import numpy as np
-#import matplotlib.pyplot as plt
 from PIL import Image
 
 import tensorflow as tf
@@ -89,17 +88,17 @@ with tf.Session() as sess:
     train_op.run(feed_dict={X: batch[0], Y_: batch[1], keep_prob: 0.5})
   print('test accuracy %g' %accuracy.eval(feed_dict={X:mnist.test.images, Y_:mnist.test.labels, keep_prob: 1.0}))
 
-  #Name = input('Input file name: ')
-  img_0 = Image.open('/home/alex/Programming/MY_MNIST_Data/0.bmp')
-  img_1 = Image.open('/home/alex/Programming/MY_MNIST_Data/1.bmp')
-  img_2 = Image.open('/home/alex/Programming/MY_MNIST_Data/2.bmp')
-  img_3 = Image.open('/home/alex/Programming/MY_MNIST_Data/3.bmp')
-  img_4 = Image.open('/home/alex/Programming/MY_MNIST_Data/4.bmp')
-  img_5 = Image.open('/home/alex/Programming/MY_MNIST_Data/5.bmp')
-  img_6 = Image.open('/home/alex/Programming/MY_MNIST_Data/6.bmp')
-  img_7 = Image.open('/home/alex/Programming/MY_MNIST_Data/7.bmp')
-  img_8 = Image.open('/home/alex/Programming/MY_MNIST_Data/8.bmp')
-  img_9 = Image.open('/home/alex/Programming/MY_MNIST_Data/9.bmp')
+  #These must be changed to include the actual file directory when ran
+  img_0 = Image.open('0.bmp')
+  img_1 = Image.open('1.bmp')
+  img_2 = Image.open('2.bmp')
+  img_3 = Image.open('3.bmp')
+  img_4 = Image.open('4.bmp')
+  img_5 = Image.open('5.bmp')
+  img_6 = Image.open('6.bmp')
+  img_7 = Image.open('7.bmp')
+  img_8 = Image.open('8.bmp')
+  img_9 = Image.open('9.bmp')
 
   data_0 = floatify(img_0)
   data_1 = floatify(img_1)
