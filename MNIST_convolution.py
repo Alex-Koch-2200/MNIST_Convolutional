@@ -114,7 +114,6 @@ with tf.Session() as sess:
   image_feed = [data_0, data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9]
   null_array = np.zeros([10, 10])
   null_array.astype(float)
-  print("Predicted digit = %s" %sess.run(Y_conv, feed_dict={X: image_feed, Y_: null_array, keep_prob: 1.0}))
 
   print("0 : %s" %np.argmax(sess.run(Y_conv, feed_dict={X: image_feed, Y_: null_array, keep_prob: 1.0})[0]))
   print("1 : %s" %np.argmax(sess.run(Y_conv, feed_dict={X: image_feed, Y_: null_array, keep_prob: 1.0})[1]))
